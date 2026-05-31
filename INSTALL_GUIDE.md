@@ -14,7 +14,7 @@ Copy the text block below, customize the repository path if needed, and send it 
 Please register the LLM Wiki Manager skill natively in my global Antigravity config. 
 
 The source repository is currently located at:
-/home/damirl/Desktop/LLM wiki system skill
+https://github.com/DamirLukina88/LLM-wiki-system-skill wiki system skill
 
 Please perform the following steps:
 1. Locate the source 'SKILL.md' file inside the repository path.
