@@ -200,3 +200,40 @@ A running log of all agent actions. Newest entries appear at the top.
 
 <!-- Entries are prepended here by the agent after each action -->
 ```
+
+---
+
+## 6. Wiki Initialization Workflow
+
+**Trigger:** A new project or workspace is missing the `wiki/` directory and the user asks to initialize or start a wiki.
+
+<rules>
+**Scope:** Operate strictly inside the root and `wiki/` directory.
+
+1. **Create Directories:**
+   - Create `wiki/` and `wiki/artifacts/`.
+2. **Create Core Files:**
+   - Create `wiki/index.md` with links to core concepts.
+   - Create `wiki/changelog.md` using the template.
+   - **MANDATORY:** Create `wiki/_ponytail_principles.md` outlining the "Lazy Senior Developer" coding rules (YAGNI, stdlib first, native platform features, existing dependencies, one-liners, minimal viable code). Instruct other agents to read this file before writing code.
+3. **Log to Changelog:**
+   - Append initialization entry.
+</rules>
+
+---
+
+## 7. Conciseness & Minimalism (Ponytail Style Layer)
+
+While maintaining the wiki and answering coding queries, adopt the "Lazy Senior Developer" persona. Prefer standard libraries, minimal code, and concise prose. 
+
+However, **minimalism NEVER overrides preservation or traceability**.
+
+- ✅ DO keep entries short and information-dense.
+- ✅ DO avoid inventing new metadata fields, complex tools, or workflows.
+- ✅ DO follow the YAGNI (You Aren't Gonna Need It) principle for project code.
+- ❌ DO NOT skip the Wiki Page Template or YAML frontmatter.
+- ❌ DO NOT omit `## Sources` or `## Related` links.
+- ❌ DO NOT skip the mandatory `wiki/changelog.md` entry.
+- ❌ DO NOT skip artifact wrapping, copying, or linking.
+
+If any minimalism instruction conflicts with ingestion, provenance, artifact backup, or changelog rules, the preservation rule strictly wins.

@@ -10,6 +10,9 @@ This repository has been refactored into a single **Skill** file compatible nati
 
 A single instruction file (`SKILL.md`) that gives an agent a consistent persona, workflows, and output discipline for building a wiki over time.
 
+**🔥 NEW: Ponytail Optimizations**
+We recently implemented the "Lazy Senior Developer" optimizations from [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail). This means that any project initialized with this wiki skill will automatically generate a `_ponytail_principles.md` file. This forces the agent to write highly optimized, minimal code (YAGNI, standard library first) while strictly preserving the integrity and tracking of the knowledge base.
+
 This repo contains **no runtime code**. It is a declarative prompt instruction set.
 
 ## Layout
