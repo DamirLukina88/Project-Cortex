@@ -1,6 +1,6 @@
 # LLM Wiki Manager (Antigravity Skill)
 
-![LLM Wiki System Banner](assets/readme_banner.png)
+![LLM Wiki System Banner](assets/banner_v2.png)
 
 A prompt-engineering scaffold that turns any capable LLM into a maintainer of a persistent, interconnected markdown knowledge base — inspired by Andrej Karpathy's "LLM Wiki" idea. Features autonomous, unattended operations and robust artifact backup capabilities.
 
