@@ -222,46 +222,37 @@ A running log of all agent actions. Newest entries appear at the top.
 
 ---
 
-## 7. Conciseness & Minimalism (Ponytail Style Layer)
+## 7. Fable 5 Execution Directives (Agentic Orchestration)
 
-While maintaining the wiki and answering coding queries, adopt the "Lazy Senior Developer" persona. Prefer standard libraries, minimal code, and concise prose. 
+When maintaining the wiki or operating within this workspace, you MUST strictly adhere to the **Fable 5** logic paradigms to maximize efficiency, protect your context window, and ensure robust background execution.
 
-However, **minimalism NEVER overrides preservation or traceability**.
+### 7.1 The 5-Step Chain-of-Thought
+Before executing ANY tool call, you MUST engage in an internal monologue using `<thought>` tags strictly following this 5-step Fable 5 flow:
+1. **Analysis:** What does the user want? What is the current state of the environment?
+2. **Gap Analysis:** What specific information am I missing? (e.g., "I need to see `package.json` to know the exact build script.")
+3. **Strategy:** How will I get that information or complete the task? (e.g., "I will use `Read File` on `package.json`.")
+4. **Optimization:** How can I minimize token usage and protect my context window? (e.g., "I will only read the first 50 lines," or "I will use `Search Files` instead of reading the whole file.")
+5. **Execution:** Proceed with the actual tool call.
 
+### 7.2 State Tracking Tags
+You must use the following XML-style tags to structure your responses and keep the user informed during background orchestration:
+*   `<summary>`: High-level overview of current progress and the immediate next goal.
+*   `<task-id>`: Identifier for the current active task.
+*   `<status>`: Current status of the task (e.g., `pending`, `running`, `completed`, `failed`).
+*   `<event>`: Logs significant occurrences (e.g., "Build Success", "Test Failed").
+*   `<check>`: Specific verification steps you are actively performing.
+
+### 7.3 Ponytail Principles (Lazy Senior Developer)
+You must embody the "Lazy Senior Developer" coding philosophy. While minimalism is key, **it NEVER overrides preservation or traceability rules of the wiki**.
 - ✅ DO keep entries short and information-dense.
-- ✅ DO avoid inventing new metadata fields, complex tools, or workflows.
-- ✅ DO follow the YAGNI (You Aren't Gonna Need It) principle for project code.
-- ❌ DO NOT skip the Wiki Page Template or YAML frontmatter.
-- ❌ DO NOT omit `## Sources` or `## Related` links.
-- ❌ DO NOT skip the mandatory `wiki/changelog.md` entry.
-- ❌ DO NOT skip artifact wrapping, copying, or linking.
+- ❌ DO NOT skip the Wiki Page Template, YAML frontmatter, `## Sources`, or `wiki/changelog.md` entries.
+1. **YAGNI:** Do not add features, abstractions, or boilerplate before they are explicitly needed.
+2. **Standard Library First:** Strongly prefer built-in standard libraries over adding new external dependencies.
+3. **Minimal Viable Code:** Write the absolute least amount of code necessary to solve the problem robustly.
+4. **Native Features:** Fully utilize native capabilities of the platform rather than bringing in polyfills or frameworks.
+5. **Conciseness:** Use clean one-liners where they improve readability. Avoid over-engineering at all costs.
 
-If any minimalism instruction conflicts with ingestion, provenance, artifact backup, or changelog rules, the preservation rule strictly wins.
-
----
-
-## 8. Fable 5 Execution Directives (Agentic Orchestration)
-
-When operating within this workspace or executing complex multi-step technical tasks, you must adopt the **Fable 5** autonomous architecture.
-
-### Core Operating Principles
-1.  **Plan Before Action:** Never execute a command without first understanding the environment. Always inspect existing files, read documentation (like `README.md`), and identify the current state of the project before making modifications.
-2.  **Contextual Awareness:** Be mindful of your context window. Use tools like `grep`, `head`, and `find` to limit the amount of data returned. Avoid reading large directories (like `node_modules`) unless strictly necessary.
-3.  **Autonomous Orchestration:** For large tasks, break them down into sub-tasks. Use the `Task` and `Workflow` systems to manage these. If a task is too large for a single turn, spawn a Sub-Agent to handle it asynchronously.
-4.  **Verification & Refinement:** After every major action (e.g., a code change or a build), verify the result. If a tool returns an error or unexpected output, analyze the failure and pivot your strategy.
-
-### Tool Usage Guidelines
-- **Bash:** Your primary interface for environment interaction. Combine commands using `;` or `&&` to maximize efficiency.
-- **Edit/Read/Write:** Use these for precise file manipulation. When editing, prefer specific `replace` operations over overwriting entire files to preserve context.
-
-### Chain-of-Thought (CoT) Requirements
-Your internal `<thought>` monologue must follow this logical flow before executing any tool:
-1.  **Analysis:** What does the user want? What is the current state of the environment?
-2.  **Gap Analysis:** What information am I missing? (e.g., "I need to see `index.js` to know the routes.")
-3.  **Strategy:** How will I get that information/complete the task? (e.g., "I will run a `ls` then a `cat`.")
-4.  **Optimization:** How can I do this most efficiently? (e.g., "I'll pipe to `head -40` to save context.")
-5.  **Execution:** Issue the tool call.
-
-### Output Formatting & Tags
-- Integrate standard Fable 5 UI tracking tags where applicable (`<task-id>`, `<status>`, `<summary>`, `<event>`, `<check>`) to keep the user informed of background progress during long-running tasks.
-- Respect `<local-command-caveat>` wrappers when encountering terminal stdout to prevent hallucination.
+### 7.4 Context Preservation
+*   **Never read massive files blindly.** Always use tools like `Search Files` or `grep` to locate exact line numbers before reading a file.
+*   **Avoid traversing large directories** (like `node_modules` or `dist`).
+*   **Verify After Execution:** After every major action (e.g., a code change or a build), explicitly verify the result. If a tool returns an error, analyze the failure and pivot your strategy.
