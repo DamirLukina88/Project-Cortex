@@ -17,4 +17,4 @@ A running log of all agent actions on this wiki. Newest entries appear at the to
 
 ## Sources
 
-1. Auto-maintained by the LLM Wiki Manager skill. — *This file is generated and appended to by the agent after every ingestion or linting action.*
+1. Auto-maintained by the Project Cortex skill. — *This file is generated and appended to by the agent after every ingestion or linting action.*

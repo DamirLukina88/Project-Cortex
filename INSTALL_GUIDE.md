@@ -11,7 +11,7 @@ Here is the exact prompt you can copy and paste into a fresh Antigravity chat wi
 Copy the text block below, customize the repository path if needed, and send it to a fresh Antigravity session:
 
 ```text
-Please register the LLM Wiki Manager skill natively in my global Antigravity config. 
+Please register the Project Cortex skill natively in my global Antigravity config. 
 
 The source repository is currently located at:
 https://github.com/DamirLukina88/LLM-wiki-system-skill wiki system skill
@@ -20,7 +20,7 @@ Please perform the following steps:
 1. Locate the source 'SKILL.md' file inside the repository path.
 2. In my global configuration directory (check '~/.gemini/config/plugins/'), create a new plugin directory named 'llm-wiki-plugin'.
 3. Write a standard 'plugin.json' manifest inside that directory specifying name: "llm-wiki-plugin", version: "1.0.0", and a description.
-4. Copy the content of the source 'SKILL.md' into 'llm-wiki-plugin/skills/llm-wiki-manager/SKILL.md'.
+4. Copy the content of the source 'SKILL.md' into 'llm-wiki-plugin/skills/project-cortex/SKILL.md'.
 5. Audit and verify that all directories were created correctly.
 ```
 

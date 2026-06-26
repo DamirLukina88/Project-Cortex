@@ -2,7 +2,7 @@
 
 ![Wiki Icon](../assets/wiki_icon.png)
 
-This directory contains the persistent, structured markdown knowledge base managed by the **LLM Wiki Manager** skill. 
+This directory contains the persistent, structured markdown knowledge base managed by the **Project Cortex** skill. 
 
 Rather than letting notes and codebase documentation get lost in chat histories, this wiki serves as the centralized "ground truth" for the project.
 
